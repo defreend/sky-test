@@ -1,0 +1,118 @@
+<div class="row">
+  <div class="col" ng-class="$ctrl.client ? 's8' : 's12'">
+    <clients-table params="clients_params"></clients-table>
+  </div>
+  <div class="col s4" ng-if="$ctrl.client">
+    <div class="col s12">
+      <div class="card horizontal">
+        <div class="card-stacked" ng-hide="editable">
+
+          <div class="card-content">
+            <h5 class="m-t-none pos-rlt">
+              <img ng-src="{{$ctrl.client.picture.large}}">
+              <span class="pull-left v-align-top capitalize">
+                {{$ctrl.client.name | fullName}}
+              </span>
+              <div class="pos-abt right-0 top-0">
+                <a href="" class= red-text text-darken-4" ng-click="$ctrl.client = null">
+                  <i class="material-icons">close</i>
+                </a>
+              <div>
+            </h5>
+            <ul class="collection">
+              <li class="collection-item capitalize">Gender: {{$ctrl.client.gender}}</li>
+              <li class="collection-item">Age: {{$ctrl.client.dob.age}}</li>
+              <li class="collection-item">Nationality: {{$ctrl.client.nat}}</li>
+              <li class="collection-item">Login: {{$ctrl.client.login.username}}</li>
+              <li class="collection-item">Email: {{$ctrl.client.email}}</li>
+              <li class="collection-item">Phone: {{$ctrl.client.phone}}</li>
+              <li class="collection-item">Cell: {{$ctrl.client.cell}}</li>
+              <li class="collection-item">Street: {{$ctrl.client.location.street}}</li>
+              <li class="collection-item capitalize">City: {{$ctrl.client.location.city}}, State: {{$ctrl.client.location.state}}, Zip: {{$ctrl.client.location.postcode}}</li>
+            </ul>
+          </div>
+          <div class="card-action">
+            <a href="" ng-click="editable = !editable">Change Info</a>
+          </div>
+        </div>
+
+        <div class="card-stacked" ng-show="editable">
+          <div class="card-content">
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="first_name" type="text" ng-model="$ctrl.client.name.first">
+                <label for="first_name" class="active">First Name</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="last_name" type="text" ng-model="$ctrl.client.name.last">
+                <label for="last_name" class="active">Last Name</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="age" type="text" ng-model="$ctrl.client.dob.age">
+                <label for="age" class="active">Age</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="nat" type="text" ng-model="$ctrl.client.nat">
+                <label for="nat" class="active">Nationality</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="login" type="text" ng-model="$ctrl.client.login.username">
+                <label for="login" class="active">Login</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="email" type="text" ng-model="$ctrl.client.email">
+                <label for="email" class="active">Email</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="phone" type="text" ng-model="$ctrl.client.phone">
+                <label for="phone" class="active">Phone</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="cell" type="text" ng-model="$ctrl.client.cell">
+                <label for="cell" class="active">Cell</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="street" type="text" ng-model="$ctrl.client.location.street">
+                <label for="street" class="active">Street</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s4">
+                <input id="city" type="text" ng-model="$ctrl.client.location.city">
+                <label for="city" class="active">City</label>
+              </div>
+              <div class="input-field col s4">
+                <input id="state" type="text" ng-model="$ctrl.client.location.state">
+                <label for="state" class="active">State</label>
+              </div>
+              <div class="input-field col s4">
+                <input id="postcode" type="text" ng-model="$ctrl.client.location.postcode">
+                <label for="postcode" class="active">Postcode</label>
+              </div>
+            </div>
+          </div>
+          <div class="card-action">
+            <a href="" ng-click="editable = !editable">
+              <span ng-show="editable">Show Info</span>
+              <span ng-hide="editable">Change Info</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

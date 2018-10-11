@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col s12">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="cursor-pointer" ng-repeat="c in $ctrl.clients" ng-click="$ctrl.selectClient(c)">
+          <td>{{$index + 1}}</td>
+          <td class="capitalize" ng-bind="c.name | fullName"></td>
+          <td ng-bind="c.email"></td>
+          <td ng-bind="c.phone"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

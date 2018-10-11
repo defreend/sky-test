@@ -1,0 +1,29 @@
+.pos-rlt{position: relative;}
+.pos-stc{position: static;}
+.pos-abt{position: absolute;}
+.inline{display: inline-block;}
+
+.pull-none{float: none;}
+.pull-right{float: right};
+.pull-left{float: left};
+
+.text-center{text-align: center;}
+.text-left{text-align: left;}
+.text-right{text-align: right;}
+
+.v-align-middle {vertical-align: middle;}
+.v-align-top {vertical-align: top;}
+
+.capitalize {text-transform: capitalize;}
+
+.cursor-pointer {cursor: pointer ;}
+.font-bold{font-weight: bold}
+
+.right-0{right: 0px;}
+.top-0{top: 0px;}
+
+.m-t-none{margin-top: 0px;}
+
+.card-content .row {
+  margin-bottom: 0px;
+}
