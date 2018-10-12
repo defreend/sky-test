@@ -35,6 +35,9 @@ angular
         },
         'content': {
           template: '<div ui-view></div>'
+        },
+        'footer': {
+          templateUrl: 'views/footer.html'
         }
       }
     })

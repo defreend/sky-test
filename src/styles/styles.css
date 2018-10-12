@@ -25,7 +25,11 @@
 .top-0{top: 0px;}
 
 .m-t-none{margin-top: 0px;}
+.m-t-sm{margin-top: 10px;}
 
 .card-content .row {
   margin-bottom: 0px;
+}
+.page-footer{
+	padding-top: 0px;
 }
