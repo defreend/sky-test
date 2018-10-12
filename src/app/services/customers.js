@@ -6,11 +6,11 @@
  * @description
  * # SkyUpTestApp
  *
- * Clients service.
+ * Customers service.
  */
  
 angular.module('SkyUpTestApp')
-.service('ClientsSvc', function($http, $q) {
+.service('CustomersSvc', function($http, $q) {
   
   var url = 'https://randomuser.me/api/';
 
@@ -21,7 +21,7 @@ angular.module('SkyUpTestApp')
   };
 
   return {
-    getClients: function(params) {
+    getCustomers: function(params) {
 
       var deferred = $q.defer();
       var parameters = (!params ? _default_params : params);

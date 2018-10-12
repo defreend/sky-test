@@ -10,7 +10,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr class="cursor-pointer" ng-repeat="c in $ctrl.clients" ng-click="$ctrl.selectClient(c)">
+        <tr class="cursor-pointer" ng-repeat="c in $ctrl.customers" ng-click="$ctrl.selectCustomer(c)">
           <td>{{$index + 1}}</td>
           <td class="capitalize" ng-bind="c.name | fullName"></td>
           <td ng-bind="c.email"></td>

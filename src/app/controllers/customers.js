@@ -2,15 +2,15 @@
 
 /**
  * @ngdoc function
- * @name SkyUpTestApp.controller:FormCtrl
+ * @name SkyUpTestApp.controller:CustomersCtrl
  * @description
- * # FormCtrl
+ * # CustomersCtrl
  * Controller of the SkyUpTestApp
  */
-angular.module('SkyUpTestApp').controller('ClientsCtrl',
+angular.module('SkyUpTestApp').controller('CustomersCtrl',
   function ($scope) {
 
-    $scope.clients_params = {
+    $scope.customers_params = {
       inc: 'gender, name, picture, location, email, phone, cell, nat, login, dob',
       nat: 'FR',
       results: 20

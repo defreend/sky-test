@@ -19,8 +19,8 @@ angular
 })
 .config(function ($stateProvider, $urlRouterProvider) {
   $urlRouterProvider
-    .when('/', '/app/clients')
-    .otherwise('/app/clients');
+    .when('/', '/app/customers')
+    .otherwise('/app/customers');
   $stateProvider
     .state('root', {
       abstract: true,
@@ -38,9 +38,9 @@ angular
         }
       }
     })
-    .state('root.app.clients', {
-      url: '/clients',
-      templateUrl: 'views/clients.html',
-      controller: 'ClientsCtrl'
+    .state('root.app.customers', {
+      url: '/customers',
+      templateUrl: 'views/customers.html',
+      controller: 'CustomersCtrl'
     })
 });
